@@ -1,0 +1,46 @@
+---
+  title: "A3 - Data Visualization (Incarceration)"
+  author: "Tyler Takeuchi"
+  output: html_document
+  date: "5/22/22"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("knitr")
+source("analysis.r")
+```
+## Introduction
+
+The problem domain I am choosing to analyze is the proportion of black people in jail compared to the
+proportion of black people within a particular location. A commonly heard rhetoric about racial injustice
+revolves around the disproportiante incarceration of black people in the US. I believe that this rhetoric 
+can be supported by comparing the racial demographics of an area, then comparing that to the distribution 
+of racial demographics in jails. Additionally, I will be taking a closer look at the proportion of black 
+incarcertaion in rural areas to gain context on racial injustice in lesser diverse areas.
+The variables I will be focusing on are black_pop_15to64, total_pop_15to64, total_jail_pop, and
+black_jail_pop. 
+
+## Summary Information
+A quick glance at some of the values calculated from the dataset is concerning. One value I wanted to look at
+specifically was the black jail proportion in comparison to the proportion of black people as a whole. The 
+black population represented 13.4 percent of the US population in 2018, however, black people represented over
+33.5 percent of the population in jails. This disparity must be tied to causal systemic factors and is
+virtualy irrefutable. Though there are missing values, rural areas seemed to have less racial disparities with
+incarcertion. This does not suggest that there is no injustice but the disparity was slightly less, the black 
+population made up about 9 percent of rural populations, and represented 24 percent of the jailed populations.
+With 56599 missing values in the black_jail_pop variable, there was still 247547 incarcerted black people for 2018. 
+Outside sources (BJS) suggested that there were over 475000 black people in jail in 2017. 
+
+
+```{r echo=FALSE, warning=FALSE}
+line_graph
+```
+
+```{r echo=FALSE, warning=FALSE}
+rural_vs_large
+```
+
+```{r echo=FALSE, warning=FALSE}
+avg_black_prop_map 
+```
